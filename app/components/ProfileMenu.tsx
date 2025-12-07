@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, Dispatch, SetStateAction } from "react";
+import Image from "next/image";
 import { User, Settings, LogOut, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -38,13 +39,12 @@ export default function ProfileMenu({
         className="flex items-center justify-center w-10 h-10 rounded-full border border-white 
                    bg-transparent hover:bg-white/10 transition overflow-hidden relative"
       >
-        <img
+        <Image
           src={avatarUrl}
           alt="User avatar"
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            (e.target as HTMLImageElement).style.display = "none";
-          }}
+          fill
+          sizes="40px"
+          className="object-cover"
         />
         <User size={18} className="text-white absolute" />
       </button>
@@ -67,10 +67,12 @@ export default function ProfileMenu({
             >
               {/* User Info */}
               <div className="px-4 py-3 border-b border-gray-100 flex items-center gap-3">
-                <img
+                <Image
                   src={avatarUrl}
                   alt="User avatar"
-                  className="w-10 h-10 rounded-full object-cover"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
                 />
                 <div>
                   <p className="text-sm font-medium text-gray-800">John Doe</p>

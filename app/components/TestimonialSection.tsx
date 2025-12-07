@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Poppins } from "next/font/google";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, Pause, Play, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -137,11 +138,11 @@ export default function TestimonialSection() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6 }}
             >
-              <img
+              <Image
                 src={testimonials[current].image}
                 alt={`Photo of ${testimonials[current].author}`}
-                loading="lazy"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>

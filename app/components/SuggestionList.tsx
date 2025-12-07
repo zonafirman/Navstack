@@ -59,7 +59,7 @@ export default function SuggestionList({
 
             {/* AI-like suggestion section */}
             <div className="px-4 py-2 text-xs text-gray-500 border-t border-white/20 bg-white/30 backdrop-blur-sm">
-              Did you mean: <span className="font-medium cursor-pointer hover:underline">"{items[0]}"</span>?
+              Did you mean: <span className="font-medium cursor-pointer hover:underline">&quot;{items[0]}&quot;</span>?
             </div>
           </motion.div>
         </motion.div>
