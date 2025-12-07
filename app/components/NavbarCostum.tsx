@@ -8,15 +8,12 @@ import {
   X,
   Code2,
   Monitor,
-  Search,
   Sun,
   Moon,
   Smartphone,
   Tablet,
   Laptop,
-  Layers,
   Download,
-  Layout as LayoutIcon,
   RefreshCcw,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";

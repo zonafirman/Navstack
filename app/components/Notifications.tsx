@@ -8,7 +8,7 @@ export default function Notifications({
   setActiveDropdown,
 }: {
   activeDropdown: string | null;
-  setActiveDropdown: (d: any) => void;
+  setActiveDropdown: (d: string | null) => void;
 }) {
   return (
     <Dropdown

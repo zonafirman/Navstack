@@ -69,7 +69,7 @@ export default function Dropdown<T>({
 
   const handleItemKeyDown = (
     e: ReactKeyboardEvent<HTMLDivElement>,
-    index: number
+    _index: number
   ) => {
     if (e.key === "ArrowDown") {
       e.preventDefault();
